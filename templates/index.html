@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Cover Letter Generator</title>
+</head>
+<body>
+    <style>
+        input
+        {
+            margin-bottom: 10px;
+        }
+        label
+        {
+            margin-left: 5px;
+        }
+    </style>
+    <h1>Cover Letter Generator</h1>
+    <h4>Input the following information and this page will create a cover letter for you.</h4>
+    <form method="POST">
+        <div>
+            <label for="company">Company: </label><br>
+            <input type="text" placeholder="Company" id="company" name="company" autofocus autocomplete="off">
+        </div>
+        <div>
+            <label for="position">Position: </label><br>
+            <input type="text" placeholder="Position" id="position" name="position" autocomplete="off">
+        </div>
+        <div>
+            <label for="addon">Additional Information</label><br>
+            <textarea name="addon" id="addon" placeholder="More Info"></textarea>
+        </div>
+        <input type="submit">
+    </form>
+</body>
