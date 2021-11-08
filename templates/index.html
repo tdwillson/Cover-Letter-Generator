@@ -14,7 +14,23 @@
         {
             margin-left: 5px;
         }
+        a
+        {
+            position: fixed;
+            right: 5px;
+            left: auto;
+            text-align: right;
+            padding: 10px 15px;
+            margin: auto;
+            text-decoration: none;
+            color: white;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
     </style>
+    <div>
+        <a href="/history">History</a>
+    </div>
     <h1>Cover Letter Generator</h1>
     <h4>Input the following information and this page will create a cover letter for you.</h4>
     <form method="POST">
@@ -31,5 +47,6 @@
             <textarea name="addon" id="addon" placeholder="More Info"></textarea>
         </div>
         <input type="submit">
+        <input type="text" value="false" name="fromhistory" style="visibility: hidden;">
     </form>
 </body>

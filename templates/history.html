@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Cover Letter History</title>
+    <style>
+        table th td
+        {
+            border: 1px solid black;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Company</th>
+            <th>Position</th>
+            <th></th>
+        </tr>
+        {% for letter in letters %}
+            <tr>
+                <td>{{ letter.id }}</td>
+                <td>{{ letter.company }}</td>
+                <td>{{ letter.position }}</td>
+                <td>
+                    <form action="/" method="post">
+                        <input type="submit" value="Open">
+                        <input type="text" value="{{ letter.company }}" name="company" style="visibility: hidden;">
+                        <input type="text" value="{{ letter.position }}" name="position" style="visibility: hidden;">
+                        <input type="text" value="{{ letter.addon }}" name="addon" style="visibility: hidden;">
+                        <input type="text" value="true" name="fromhistory" style="visibility: hidden;">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+</body>
